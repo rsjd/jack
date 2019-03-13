@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<title>Insert title here</title>
+<script>
+$(document).ready(function(){
+	document.getElementById("addiv").hidden=true;
+	
+	$("#addbtn").click(function(){
+		document.getElementById("addiv").hidden=false;
+		document.getElementById("addbtn").hidden=true;
+		
+	});
+	
+	$("#cancelbtn").click(function(){
+		document.getElementById("addid").value=" ";
+		document.getElementById("addbook").value=" ";
+		document.getElementById("addiv").hidden=true;
+		document.getElementById("addbtn").hidden=false;
+	
+	});
+	
+	});
+</script>
+</head>
+<body>
+<h1>
+WELCOME TO SPRING_BOOT
+</h1>
+<table id="Booktable">
+<tr>
+<th>ID</th>
+<th>BOOK</th>
+</tr>
+</table>
+<br>
+<br>
+<input type="button" id="addbtn" value="Add">
+<br>
+<br>
+<div id="addiv">
+ID:<input type="text" id="addid"><br><br>
+BOOK:<input type="text" id="addbook"><br>
+<br>
+<input type="button" id="savebtn" value="save">
+<input type="button" id="cancelbtn" value="cancel">
+</div>
+</body>
+</html>
